@@ -1,0 +1,131 @@
+TCEFORM {
+	tt_content{
+		layout{
+			#disabled = 1
+			label = Section Color
+			removeItems = 3,4,5,6,7,8,
+			
+			addItems {
+			
+			}
+			altLabels {
+				0 = Default
+				1 = Gray
+				2 = Red
+			}
+			
+			}
+	}
+}
+
+
+mod.web_layout.BackendLayouts {
+  BeLayout1 {
+    title = BE-layout Start Page
+    config {
+      backend_layout {
+        colCount = 1
+        rowCount = 2
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Content
+						colPos = 0
+					}
+				}
+			}
+			2 {
+				columns {
+					1 {
+						name = Footer
+						colPos = 4
+					}
+				}
+			}
+		}
+      }
+      
+    }
+    icon = EXT:megafry_template/Resources/Public/Icons/BeLayout1.svg
+  }
+  BeLayout2 < .BeLayout1
+  BeLayout2 {
+  	title = BE-layout Sub Page
+  	
+  	config.backend_layout {
+  		rowCount = 1
+  		
+  		rows {
+  			2 >
+  		}
+  	}
+  	icon = EXT:megafry_template/Resources/Public/Icons/BeLayout2.svg
+  }
+  
+}
+
+
+#add your own gridelements
+tx_gridelements.setup {
+	4 {
+		title = 4 Col
+		config {
+			colCount = 4
+			rowCount = 1
+			rows {
+				1 {
+					columns {
+						1 {
+							name = Left
+							colPos = 1
+						}
+						2 {
+							name = center
+							colPos = 0
+						}
+						3 {
+							name = Right
+							colPos = 2
+						}
+						4 {
+							name = Outer Right 
+							colPos = 3
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	3 < .4
+	3 {
+		title = 3 Col
+		config {
+			colCount = 3
+			rows {
+				1 {
+					columns {
+						4 >
+					}
+				}
+			}
+		}
+	}
+	2 < .4
+	2 {
+		title = 2 Col
+		config {
+			colCount = 2
+			rows {
+				1 {
+					columns {
+						2.name = Right
+						3 >
+						4 >
+					}
+				}
+			}
+		}
+	}
+}

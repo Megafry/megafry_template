@@ -1,0 +1,5 @@
+page.includeCSS {
+	megafry_template_font-awesome = EXT:megafry_template/Resources/Public/CSS/font-awesome.css
+	megafry_template_main = EXT:megafry_template/Resources/Public/Less/main.less
+	
+}

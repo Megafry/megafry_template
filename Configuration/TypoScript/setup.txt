@@ -1,0 +1,11 @@
+#INCLUDE TYPOSCRIPT CONSTANTs
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:megafry_template/Configuration/TypoScript/constants.txt">
+
+#INCLUDE TYPOSCRIPT SETUPs
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:megafry_template/Configuration/TypoScript/Content/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:megafry_template/Configuration/TypoScript/PageRendering/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:megafry_template/Configuration/TypoScript/Gridelement/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:megafry_template/Configuration/TypoScript/CSS/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:megafry_template/Configuration/TypoScript/JavaScript/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:megafry_template/Configuration/TypoScript/GetContent/setup.txt">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:megafry_template/Configuration/TypoScript/MainNav/setup.txt">

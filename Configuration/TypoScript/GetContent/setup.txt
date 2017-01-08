@@ -1,0 +1,25 @@
+lib.getContent = CONTENT
+lib.getContent {
+	table = tt_content
+	select {
+		 orderBy = sorting
+		 where.wrap = colPos = |
+		 where.data = field:colPos
+	}
+}
+
+lib.getFooter < lib.getContent
+lib.getFooter {
+	wrap = <div id="footer">|</div>
+	select.where >
+	select.where = colPos = 4
+	
+	slide = -1
+}
+
+
+
+tt_content.stdWrap {
+	dataWrap = <section class="section{field:layout}"><div class="container">|</div></section>
+	dataWrap.if.isFalse.field = tx_gridelements_container
+}
