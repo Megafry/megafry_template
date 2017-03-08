@@ -2,13 +2,13 @@
 /*don't set font-size, color, ... -> update the less variable and use it.*/
 
 
-
+header,
 h1,
 h2,
 h3,
 h4,
 h5 {
-	.text-center;	
+	.text-center;
 }
 
 .align-center {
@@ -17,7 +17,7 @@ h5 {
 
 
 .lead {
-	/*color: @brand-primary;*/	
+	/*color: @brand-primary;*/
 	font-weight: 400;
 	text-align: justify;
 
@@ -29,11 +29,11 @@ h5 {
 		list-style: none;
 	}
 }
-.skipLink > a, 
-.skipLink > a:visited, 
-.skipLink > a:link, 
-a.skipLink, 
-a.skipLink:visited, 
+.skipLink > a,
+.skipLink > a:visited,
+.skipLink > a:link,
+a.skipLink,
+a.skipLink:visited,
 a.skipLink:link {
     position: absolute;
     z-index: 100000;
@@ -108,7 +108,7 @@ h3.prototyp-header {
 }
 
 .bold {
-	font-weight: bold; 	
+	font-weight: bold;
 }
 
 .active a {
@@ -176,7 +176,7 @@ a.external-link[href*="https://"]:after {
 .btn-outline {
     background-color: transparent;
     color: inherit;
-    
+
     &.btn-primary:not(.active):not(:active):not(:hover) {
     	color: @brand-primary;
     }
@@ -185,7 +185,7 @@ a.external-link[href*="https://"]:after {
 
 /* definition for the Slick Slider*/
 .main-slider {
-			
+
 		// desktop
 		@media screen and (min-width: @screen-sm-min) {
 
@@ -233,22 +233,22 @@ a.external-link[href*="https://"]:after {
 }
 
 .table-responsive {
-	
+
 	&::-webkit-scrollbar {
     width: 5px;
     height: 5px;
-    
+
 	}
 	&::-webkit-scrollbar-thumb {
 		border-radius: 8px;
 		background-color: @brand-primary;
-		
+
 	}
 	&::-webkit-scrollbar-track {
 		height: 5px;
-	} 
-	
-	
+	}
+
+
 }
 
 @-moz-document url-prefix() {
@@ -261,7 +261,7 @@ a.external-link[href*="https://"]:after {
 			list-style-type: circle;
 			/*
 			list-style: none;
-			
+
 			a:before {
 				.glyphicon;
 				.small;
@@ -274,24 +274,24 @@ a.external-link[href*="https://"]:after {
 }
 
 .brand-liste {
-	
+
 	border-left: 2px solid @brand-primary;
 	padding-left: 15px;
-	
-	
+
+
 	&.striped {
-		li:nth-child(odd), 
+		li:nth-child(odd),
 		.item:nth-child(odd) {
 			background-color:  lighten(@gray-lighter, 4%);
 		}
-		
+
 	}
 
 	.brand-liste-title {
 		font-size: 22px;
 	}
 
-	ul, 
+	ul,
 	.groupe {
 		margin-top: 20px;
 		padding: 0;
@@ -303,24 +303,24 @@ a.external-link[href*="https://"]:after {
 
     	margin-toto: unset;
 
-		li, 
+		li,
 		.item {
 
 			list-style-type: none;
 			list-style-position: inside;
-	    	
+
 		    border-bottom: 1px solid @brand-primary;
 		    padding: 0px;
 
 
-	
+
 
 			a {
-				
+
 				display: block;
     			padding: 10px 0px;
     			padding-left: 10px;
-    			    
+
     			&:hover {
 					background-color: @gray-lighter;
 					text-decoration: none;
@@ -332,15 +332,15 @@ a.external-link[href*="https://"]:after {
 					margin-right: 10px;
 					font-size: 23px;
     				top: 6px;
-					
+
 				}
-				
+
 				&.download {
 					&:before {
 						content: "\e026";
 					}
 				}
-				    
+
 			}
 
 		}
@@ -355,7 +355,7 @@ a.external-link[href*="https://"]:after {
 					content: "\e088" !important;
 					transition: transform 0.2s ease-in-out;
 				}
-				
+
 				&.collapsed {
 					&:before {
 						transform: rotate(45deg);
@@ -366,7 +366,7 @@ a.external-link[href*="https://"]:after {
 }
 
 .profile-area {
-	
+
 	.card {
 		background-color: #ffffff;
 		padding-bottom: 60px;
@@ -390,8 +390,8 @@ a.external-link[href*="https://"]:after {
 		&:not(.gray-lighter-bg):not(.brand-white-bg) {
 			color: #ffffff;
 		}
-		
-		
+
+
 
 	}
 }
@@ -401,7 +401,3 @@ a.external-link[href*="https://"]:after {
 .ce-textpic  img{
 	.img-responsive;
 }
-
-
-
-

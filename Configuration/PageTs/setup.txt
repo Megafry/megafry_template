@@ -4,20 +4,37 @@ TCEFORM {
 			#disabled = 1
 			label = Section Color
 			removeItems = 3,4,5,6,7,8,
-			
+
 			addItems {
-			
+
 			}
 			altLabels {
 				0 = Default
 				1 = Gray
 				2 = Red
 			}
-			
+
 			}
+
+		header_layout {
+			removeItems = 0,5,6,
+			altLabels {
+				1 = Header H1
+				2 = Header H2
+				3 = Header H3
+				4 = Header H4
+			}
+		}
 	}
 }
 
+TCAdefaults {
+	tt_content {
+			imagecols = 1
+			header_layout = 2
+	}
+
+}
 
 mod.web_layout.BackendLayouts {
   BeLayout1 {
@@ -45,24 +62,24 @@ mod.web_layout.BackendLayouts {
 			}
 		}
       }
-      
+
     }
     icon = EXT:megafry_template/Resources/Public/Icons/BeLayout1.svg
   }
   BeLayout2 < .BeLayout1
   BeLayout2 {
   	title = BE-layout Sub Page
-  	
+
   	config.backend_layout {
   		rowCount = 1
-  		
+
   		rows {
   			2 >
   		}
   	}
   	icon = EXT:megafry_template/Resources/Public/Icons/BeLayout2.svg
   }
-  
+
 }
 
 
@@ -89,7 +106,7 @@ tx_gridelements.setup {
 							colPos = 2
 						}
 						4 {
-							name = Outer Right 
+							name = Outer Right
 							colPos = 3
 						}
 					}
@@ -97,7 +114,7 @@ tx_gridelements.setup {
 			}
 		}
 	}
-	
+
 	3 < .4
 	3 {
 		title = 3 Col
@@ -128,4 +145,20 @@ tx_gridelements.setup {
 			}
 		}
 	}
+}
+
+RTE {
+	default {
+		contentCSS = EXT:megafry_template/Resources/Public/CSS/RTE.css
+		proc.allowedClasses := addToList(btn-primary)
+		buttons.link.properties.class.allowedClasses := addToList(btn-primary)
+
+		}
+		
+		classes {
+			btn-primary {
+				name = Button
+				requires = btn
+				}
+		}
 }

@@ -5,6 +5,7 @@ lib.getContent {
 		 orderBy = sorting
 		 where.wrap = colPos = |
 		 where.data = field:colPos
+		 includeRecordsWithoutDefaultTranslation = 1
 	}
 }
 
@@ -13,7 +14,7 @@ lib.getFooter {
 	wrap = <div id="footer">|</div>
 	select.where >
 	select.where = colPos = 4
-	
+
 	slide = -1
 }
 

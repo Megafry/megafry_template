@@ -1,6 +1,6 @@
 
 ;(function($, window, document, undefined) {
- 	
+
 
 	$(function() {
 
@@ -24,14 +24,14 @@
 		  autoplaySpeed: 4000,
 		  speed: 500,
 		  focusOnSelect: true,
-		
+
 		  arrows: false,
 		   responsive: [
 			    {
 			      breakpoint: 767,
 			      settings: {
-			        
-			       
+
+
 			        slidesToShow: 1
 			      }
 			    }
@@ -39,12 +39,12 @@
 		});
 
 
-       
-		
+
+
 		//make youtube and vimeo video responsive
 		//$('iframe[src*="youtube.com"],iframe[src*="vimeo.com"]').wrap('<div class="embed-responsive embed-responsive-16by9">');
 
-	
+
 
 	$('input[type=file]').change( function(){
 		var filename = $(this).val().split('\\').pop();
@@ -59,12 +59,32 @@
 
 	});
 
+
+
 })(jQuery, window, document);
 
 
+$(document).ready(function () {
+  $(".agegate").modal({
+    keyboard: false,
+    backdrop: 'static',
+  });
+
+  $("#agegate-btn").click(function(){
+    document.cookie="agegate=1;expires=Session "
+
+  $(".agegate").modal("hide");
+
+    return false;
+  });
 
 
-//google map 
+});
+
+
+
+
+//google map
 
 var map;
 
@@ -368,40 +388,3 @@ function initMap() {
   });
 
 }
-
-
-
-
-  /* ------------------------------------------------------------------  */
- /* ----------- not needed if you are using a Less compiler ----------  */
-/* ------------------------------------------------------------------  */
-
-$(window).load(function() {
-	setTimeout(function() {
-	   $(window).resize();
-
-		google.maps.event.trigger(map, 'resize');
-		map.setCenter(new google.maps.LatLng(55.69107,12.59288));
- 		
-
-	  }, 1000);
-
-
-
-});
-
-
-
-/* less*/
-
-less.watch();
-	less.optimization = 0;
-	jQuery(document).ready(function(){
-		cache = null;
-		less.watchTimer = setInterval(function () {
-			if (less.watchMode) {
-				console.log('Forcing Compile');
-				less.refresh(true);
-			}
-		}, less.poll);
-	});

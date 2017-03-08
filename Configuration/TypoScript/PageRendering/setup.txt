@@ -1,13 +1,22 @@
-config.baseURL = http://localhost/typo3_7/
+#config.baseURL = http://localhost/typo3_7/
 
 
 page {
 
 	#viewport for MediaQuery
 	meta.viewport = width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no
-	
+
 	#Usage of httpEquivalent:
 	meta.X-UA-Compatible = IE=edge
-	meta.X-UA-Compatible.httpEquivalent = 1	
-	
+	meta.X-UA-Compatible.httpEquivalent = 1
+
+	config.contentObjectExceptionHandler = 0
+}
+
+config {
+	doctype = html5
+	language = {$language}
+	compressCss = 1
+	#concatenateCss = 1
+	#compressJs = 1
 }

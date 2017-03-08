@@ -27,6 +27,8 @@ $EM_CONF[$_EXTKEY] = array(
 			'typo3' => '7.6.0-7.6.99',
 			'ws_less' => '',
 			'gridelements' => '',
+			'cdsrc_baseurl' => '',
+
 		),
 		'conflicts' => array(
 		),
